@@ -30,31 +30,41 @@ Image voiture → YOLOv5 (détection plaque) → EasyOCR (lecture) → SQLite (g
 - **Temps moyen** : 4.28s/image (CPU only)
 
 ## 🗂️ Structure du projet
+
+```
 smart-parking-ocr/
+│
 ├── app/
-│   └── streamlit_app.py      # Interface principale
+│   └── streamlit_app.py          # Interface principale — Entrée/Sortie/Dashboard
+│
 ├── scripts/
-│   ├── preprocess.py         # Preprocessing images
-│   ├── clean_text.py         # Post-traitement OCR
-│   ├── yolo_crop.py          # Détection et crop YOLO
-│   ├── batch_ocr.py          # Pipeline batch complet
-│   ├── compare_ocr.py        # Métriques et graphiques
-│   ├── vehicle_detector.py   # Détection marque véhicule
-│   └── augment_test.py       # Test conditions difficiles
+│   ├── preprocess.py             # Preprocessing images (CLAHE, resize, bilateral)
+│   ├── clean_text.py             # Post-traitement OCR + validation plaques
+│   ├── yolo_crop.py              # Détection et crop YOLO
+│   ├── batch_ocr.py              # Pipeline batch complet sur dataset
+│   ├── compare_ocr.py            # Métriques, graphiques et axe low-cost
+│   ├── vehicle_detector.py       # Détection marque véhicule (50 marques)
+│   └── augment_test.py           # Test robustesse — conditions difficiles
+│
 ├── data/
-│   └── raw/                  # Images de test
+│   └── raw/                      # Images de test manuelles
+│
 ├── results/
-│   └── figures/              # Graphiques générés
-├── models/                   # Modèles YOLO (non inclus)
+│   └── figures/                  # Graphiques générés (OCR, robustesse, low-cost)
+│
+├── models/                       # Modèles YOLO (non inclus — trop lourds)
+│   └── .gitkeep
+│
 ├── requirements.txt
 └── README.md
+```
 
 ## ⚙️ Installation
 
 ```bash
 # Cloner le repo
 git clone https://github.com/adama-basse/Smart_Parking.git
-cd smart-parking-ocr
+cd Smart_Parking
 
 # Créer l'environnement virtuel
 python -m venv .venv
