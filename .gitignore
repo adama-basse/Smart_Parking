@@ -1,0 +1,34 @@
+ # Environnement virtuel
+.venv/
+venv/
+env/
+
+# Modèles YOLO (trop lourds)
+models/
+*.pt
+*.zip
+
+# Données lourdes
+data/cropped/
+data/dataset/
+data/raw/
+
+# Base de données
+*.db
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Résultats temporaires
+results/metrics/batch_results.json
+fichiers_commites.txt
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log
+
+# VS Code
+.vscode/

@@ -1,0 +1,12 @@
+ultralytics
+Roboflow
+easyocr
+opencv-python
+streamlit
+Pillow
+numpy
+matplotlib
+pandas
+reportlab
+torch
+torchvision
