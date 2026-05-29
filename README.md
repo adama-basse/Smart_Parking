@@ -8,7 +8,7 @@ lire et gérer automatiquement les plaques d'immatriculation.
 ---
 
 ## 🏗️ Architecture du système
-Image voiture → YOLOv5 (détection plaque) → EasyOCR (lecture) → SQLite (gestion) → Streamlit (interface)
+Image voiture → YOLOv8 (détection plaque) → EasyOCR (lecture) → SQLite (gestion) → Streamlit (interface)
 
 ## 🚀 Technologies utilisées
 
@@ -25,7 +25,7 @@ Image voiture → YOLOv5 (détection plaque) → EasyOCR (lecture) → SQLite (g
 ## 📊 Résultats
 
 - **Dataset** : 8 276 images (Maroc + International)
-- **Détection YOLO** : mAP@50 = 94.1% (YOLOv5 retenu)
+- **Détection YOLO** : mAP@50 = 93.8% (YOLOv8 retenu)
 - **Taux de lecture OCR** : 77.8% sur 1 171 crops réels
 - **Temps moyen** : 4.28s/image (CPU only)
 
