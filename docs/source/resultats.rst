@@ -22,7 +22,38 @@ Détection YOLO
      - 90.6%
    * - Modèle retenu
      - ✅ Oui
-     - Non
+     - NonDétection YOLO — Comparaison
+-----------------------------
+
+Deux modèles entraînés sur le même dataset (8 276 images).
+
+.. list-table::
+   :widths: 40 30 30
+   :header-rows: 1
+
+   * - Métrique
+     - YOLOv8
+     - YOLOv5
+   * - mAP@50
+     - 93.8%
+     - 94.1%
+   * - mAP@50-95
+     - 75.2%
+     - 75.3%
+   * - Précision
+     - **96.9%** ✅
+     - 96.8%
+   * - Recall
+     - **90.6%** ✅
+     - 90.1%
+
+.. note::
+
+   **Modèle retenu : YOLOv8** — mAP@50 : 93.8% • Précision : 96.9% • Recall : 90.6%
+
+   YOLOv8 est retenu car il offre une meilleure précision et recall,
+   et bénéficie d'une architecture plus récente avec une meilleure
+   compatibilité avec les outils de déploiement.
 
 OCR sur dataset
 ---------------

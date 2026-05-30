@@ -1,27 +1,31 @@
-import os
-import sys
+import os, sys
 sys.path.insert(0, os.path.abspath('../..'))
 
 project   = 'Smart Parking'
-copyright = '2026, Adama Basse & Djibril Sall'
+copyright = '2026, Adama Basse'
 author    = 'Adama Basse'
 release   = '1.0'
+language  = 'fr'
 
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',
     'myst_parser',
 ]
 
-templates_path   = ['_templates']
-exclude_patterns = []
-language         = 'fr'
-html_theme       = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
-    'logo_only'           : False,
+    'display_version'     : True,
     'navigation_depth'    : 4,
-    'style_nav_header_background': '#0A1628',
+    'titles_only'         : False,
+}
+
+# Lien "Éditer sur GitHub"
+html_context = {
+    'display_github' : True,
+    'github_user'    : 'adama-basse',
+    'github_repo'    : 'Smart_Parking',
+    'github_version' : 'main',
+    'conf_py_path'   : '/docs/source/',
 }

@@ -14,6 +14,7 @@ Projet Computer Vision 2025/2026.
    :caption: Contenu
 
    introduction
+   dataset
    architecture
    installation
    pipeline

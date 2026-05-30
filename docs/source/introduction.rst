@@ -8,7 +8,7 @@ via OCR, identifie la marque du véhicule et gère les sessions de stationnement
 Objectifs
 ---------
 
-- Détecter les plaques avec **YOLOv5** (mAP\@50 = 94.1%)
+- Détecter les plaques avec **YOLOv8** (mAP\@50 = 93.8%)
 - Lire le texte avec **EasyOCR** (double passe EN + AR)
 - Identifier la marque du véhicule parmi **50 marques**
 - Gérer les entrées/sorties via une interface **Streamlit** hors connexion

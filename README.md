@@ -24,10 +24,55 @@ Image voiture → YOLOv8 (détection plaque) → EasyOCR (lecture) → SQLite (g
 
 ## 📊 Résultats
 
-- **Dataset** : 8 276 images (Maroc + International)
-- **Détection YOLO** : mAP@50 = 93.8% (YOLOv8 retenu)
-- **Taux de lecture OCR** : 77.8% sur 1 171 crops réels
-- **Temps moyen** : 4.28s/image (CPU only)
+### Détection YOLO — Comparaison YOLOv8 vs YOLOv5
+
+| Métrique | YOLOv8 ✅ | YOLOv5 |
+|---|---|---|
+| mAP@50 | 93.8% | 94.1% |
+| mAP@50-95 | 75.2% | 75.3% |
+| Précision | **96.9%** | 96.8% |
+| Recall | **90.6%** | 90.1% |
+
+> 🏆 **Modèle retenu : YOLOv8** — meilleure précision et recall, architecture plus récente
+
+### OCR sur dataset réel (1 171 crops)
+
+| Métrique | Valeur |
+|---|---|
+| Plaques lisibles | **911 (77.8%)** |
+| dont européennes | 128 (11.0%) |
+| dont vanity/autres | 742 (63.4%) |
+| dont marocaines | 41 (3.5%) |
+| Aucun texte lu | 207 (17.7%) |
+| Temps moyen CPU | 4.28s/image |
+
+### Robustesse — Conditions difficiles
+
+| Condition | Taux lecture | Confiance |
+|---|---|---|
+| Original | 60% | 0.20 |
+| Flou | 70% | 0.29 |
+| Nuit | 70% | 0.31 |
+| Bruit | 60% | 0.30 |
+| Incliné 15° | **90%** | 0.21 |
+
+### Détection marque véhicule
+
+| Métrique | Valeur |
+|---|---|
+| Modèle | YOLOv8 |
+| Classes | 50 marques |
+| mAP@50 | 78.4% |
+| Précision | 80.9% |
+| Recall | 68.7% |
+
+### ⚠️ Limitation connue
+
+La lecture de la **lettre arabe** des plaques marocaines reste partielle.
+Le système est pleinement opérationnel sur les plaques européennes
+et vanity plates (77.8% de taux de lecture global).
+
+L'interface Streamlit fonctionne **entièrement hors connexion**.
 
 ## 🗂️ Structure du projet
 
