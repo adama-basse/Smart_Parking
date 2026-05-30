@@ -39,7 +39,7 @@ Deux modèles entraînés sur le même dataset (8 276 images).
 OCR sur dataset
 ---------------
 
-Dataset : **1 171 crops** générés par YOLOv5 sur 8 276 images.
+Dataset : **1 171 crops** générés par YOLOv8 sur 8 276 images.
 
 .. list-table::
    :widths: 50 50
