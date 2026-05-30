@@ -15,13 +15,13 @@ Deux modèles entraînés sur le même dataset (8 276 images).
      - YOLOv8
    * - mAP\@50
      - 94.1%
-     - **93.8%** ✅
+     - **93.8%** 
    * - Précision
      - 96.8%
-     - **96.9%**
+     - **96.9%** ✅
    * - Recall
      - 90.1%
-     - **90.6%** 
+     - **90.6%** ✅ 
    * - Modèle retenu
      - Non Détection YOLO — Comparaison
      - ✅ Oui
