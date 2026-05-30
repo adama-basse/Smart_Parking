@@ -8,7 +8,7 @@ Pipeline complet
 
    Photo voiture
         ↓
-   YOLOv5 — Détection et crop de la plaque
+   YOLOv8 — Détection et crop de la plaque
         ↓
    Preprocessing — Resize x2, filtre bilatéral, CLAHE
         ↓
